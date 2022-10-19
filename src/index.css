@@ -83,9 +83,22 @@ label{
   width: 45%;
   margin: 10px auto;
   border-radius: 10px;
+  cursor: pointer;
 }
 .search-cont{
   color:#0d285a;
   font-size: 1rem;
   font-weight: 500;
+}
+
+.btn-small{
+  border:none;
+  background-color: #ee6b4a;
+  color: #fff;
+  padding: 2px 5px;
+  width: 105px;
+  margin: 20px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  height: 30px;
 }
