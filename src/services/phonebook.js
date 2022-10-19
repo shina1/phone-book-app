@@ -2,18 +2,21 @@ import axios from "axios"
 const baseUrl = 'http://localhost:3001/persons'
 // const baseUrlId = 
 
-const getAllContacts = () =>{
-    const req = axios.get(baseUrl)
-    return req.then(res => res.data)
+const getAllContacts = async () =>{
+    const req = await axios.get(baseUrl)
+    const res = req
+    return res.data
 }
 
-const createContact = (contactObj)=>{
-    const req = axios.post(baseUrl, contactObj)
-    return req.then(res => res.data)
+const createContact = async (contactObj)=>{
+    const req = await axios.post(baseUrl, contactObj)
+    const res = req
+    return res.data
 }
-const deleteContact = (id) =>{
-    const req = axios.delete(`http://localhost:3001/persons/${id}`)
-    return req.then(res => res.data)
+const deleteContact = async (id) =>{
+    const req = await axios.delete(`http://localhost:3001/persons/${id}`)
+    const res =  req
+    return res.data
 }
 
 export {

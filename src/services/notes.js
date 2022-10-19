@@ -2,14 +2,16 @@ import axios from "axios"
 
 const baseURL = 'http://localhost:3001/notes'
 
-const getAll = ()=>{
+const getAll = async ()=>{
     const req = axios.get(baseURL)
-    return req.then(res => res.data)
+    const res = await req
+    return res.data
 }
 
-const create = (newObject) => {
+const create = async (newObject) => {
     const req = axios.post(baseURL, newObject)
-    return req.then(res => res.data)
+    const res = await req
+    return res.data
 }
 
 const update = (id, newObject) =>{

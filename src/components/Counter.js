@@ -14,7 +14,7 @@ const Counter = (props) => {
         setCounter(counter - 1)
     }
     return (
-        <div>
+        <>
             {counter}
             <br />
             <Buttons onClick={handleClick} text={'plus'}/>
@@ -22,7 +22,8 @@ const Counter = (props) => {
             <Buttons onClick={setToZero} text={'reset'} />
             <br/>
             <Buttons onClick={decrease} text={'decrease'} />
-        </div>
+
+        </> 
     )
 }
 

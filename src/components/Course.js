@@ -1,12 +1,13 @@
 import React from 'react'
 
 const Course = ({course}) => {
-    const [first, second] = course
-    const {name, parts} = first
-    console.log(second.name);
+    console.log(course);
+    // const [first, second] = course
+    const {name, parts} = course.first
+    console.log(course.second.name);
     let totArr = []
     let copy = [...parts]
-    let secondCopy = [...second.parts]
+    let secondCopy = [...course.second.parts]
     copy.forEach(part => {
         totArr.push(part.exercises)
     });
@@ -29,7 +30,7 @@ const Course = ({course}) => {
                 </div>
             </section>
             <section>
-                <h2>{second.name}</h2>
+                <h2>{course.second.name}</h2>
                 <div>
                     {
                         secondCopy.map((part)=> {
